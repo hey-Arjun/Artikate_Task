@@ -4,3 +4,9 @@ langchain-openai
 chromadb 
 pydantic
 dotenv
+transformers
+datasets 
+scikit-learn 
+evaluate
+torch
+matplotlib

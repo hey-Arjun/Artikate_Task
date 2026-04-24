@@ -1,0 +1,21 @@
+ticket_id,text_preview,prediction,latency_ms
+1,My account was charged twice....,billing,412.03
+2,The app crashes when I click e...,technical_issue,36.6
+3,I would love a dark mode featu...,feature_request,34.88
+4,"Your service is terrible, I wa...",billing,35.35
+5,Is there an API for developers...,other,35.5
+6,My account was charged twice....,billing,33.84
+7,The app crashes when I click e...,technical_issue,34.24
+8,I would love a dark mode featu...,feature_request,34.67
+9,"Your service is terrible, I wa...",billing,34.79
+10,Is there an API for developers...,other,33.5
+11,My account was charged twice....,billing,35.51
+12,The app crashes when I click e...,technical_issue,32.98
+13,I would love a dark mode featu...,feature_request,31.86
+14,"Your service is terrible, I wa...",billing,31.11
+15,Is there an API for developers...,other,31.44
+16,My account was charged twice....,billing,32.53
+17,The app crashes when I click e...,technical_issue,31.61
+18,I would love a dark mode featu...,feature_request,31.82
+19,"Your service is terrible, I wa...",billing,33.35
+20,Is there an API for developers...,other,35.88
