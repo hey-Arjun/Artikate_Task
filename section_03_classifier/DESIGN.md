@@ -34,3 +34,18 @@ Despite a time-constrained training window (resulting in a 76% training match), 
 - `section_03_classifier/model/`: Local model weights.
 - `section_03_classifier/Results/`: Contains `latency_report.csv` and `confusion_matrix.png`.
 - `section_03_classifier/Briefing_section_03`: Contains `Overview in detail for Section_03`.
+
+## 7. Architectural Decision: Fine-tuning vs. Prompt Engineering
+A critical design choice was made to utilize a fine-tuned DistilBERT model rather than a Prompt Engineering approach (e.g., GPT-4o).
+
+| Feature | Fine-tuning (Selected) | Prompt Engineering (Rejected) |
+| :--- | :--- | :--- |
+| **Latency** | **~30-50ms (Local CPU)** | ~1500-3000ms (Network Roundtrip) |
+| **Cost** | **$0.00 (Local Inference)** | $0.01 - $0.05 per ticket (Token costs) |
+| **SLA Compliance** | Guaranteed < 500ms | High risk of jitter/timeout |
+| **Data Privacy** | 100% On-premise | Third-party data exposure |
+| **Reliability** | Deterministic fixed weights | Non-deterministic "Hallucinations" |
+
+**Justification:**
+- **The "Hard" Constraint:** The 500ms latency requirement is difficult to hit consistently with cloud LLMs due to network overhead. Local fine-tuning guarantees performance.
+- **Specialization:** While LLMs are generalists, our fine-tuned model is a specialist for these 5 categories, achieving **86% accuracy** with a tiny computational footprint.
