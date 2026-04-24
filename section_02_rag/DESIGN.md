@@ -38,10 +38,10 @@ Results: The current implementation achieved a 1.00 Precision@3 score across the
 # 5. Scaling to 50,000 Documents
 To transition from the current 3-document prototype to a 50,000-document production system, the following remedies are required:
 
-# A. Storage -> Local ChromaDB (It managed VectorDB (eg: pinecone, pilvus) to handle HNSW indexing at scaling without RAM exhaustion)
+### A. Storage -> Local ChromaDB (It managed VectorDB (eg: pinecone, pilvus) to handle HNSW indexing at scaling without RAM exhaustion)
 
-# B. Ingestion -> Sequestion Processing (Asynchronous Task Queue (e.g., Celery/Redis) to parallelize PDF parsing across multiple workers.)
+### B. Ingestion -> Sequestion Processing (Asynchronous Task Queue (e.g., Celery/Redis) to parallelize PDF parsing across multiple workers.)
 
-# C. Retrieval -> Vector Search Only (Hybrid Search (BM25 + Vector) to capture specific legal IDs/clause numbers that semantic search might miss.)
+### C. Retrieval -> Vector Search Only (Hybrid Search (BM25 + Vector) to capture specific legal IDs/clause numbers that semantic search might miss.)
 
-# D. Compute -> Single CPU (Load-Balanced Inference and Request Batching to maintain sub-second response times.)
+### D. Compute -> Single CPU (Load-Balanced Inference and Request Batching to maintain sub-second response times.)
