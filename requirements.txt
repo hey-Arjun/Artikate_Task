@@ -3,6 +3,7 @@ langchain
 langchain-openai 
 chromadb 
 pydantic
+fpdf
 dotenv
 transformers
 datasets 
@@ -10,3 +11,4 @@ scikit-learn
 evaluate
 torch
 matplotlib
+seaborn

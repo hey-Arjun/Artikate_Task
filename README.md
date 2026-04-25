@@ -33,3 +33,18 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Section_02 RAG Working
+
+1. First you need to upload docs file to  **section_02/rag/Data/contracts/**
+2. make .env file where u need to store your OPEN_API_KEY
+3. you need to write query in pipeline.py inside "__main__" function 
+4. Run the command
+```
+python pipeline.py
+```
+5. If you want to check the harness, you need to make a test_set a set of queries and place it in "eval_harness.py"
+6. Run the command
+```
+python eval_harness.py
+```
